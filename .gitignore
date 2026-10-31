@@ -1,0 +1,8 @@
+.cache/
+.venv/
+__pycache__/
+.pytest_cache/
+.superpowers/
+docs/media/raw/
+docs/media/marks.json
+docs/superpowers/

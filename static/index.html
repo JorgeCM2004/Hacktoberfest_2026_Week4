@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ofrenda</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script type="importmap">
+    { "imports": { "three": "/static/vendor/three.module.js", "three/addons/": "/static/vendor/addons/" } }
+  </script>
+</head>
+<body>
+  <main class="altar">
+    <section class="stage">
+      <canvas id="oracle" aria-label="The oracle, a floating sugar skull"></canvas>
+      <p class="whisper" id="whisper"></p>
+    </section>
+
+    <aside class="panel">
+      <header class="papel" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></header>
+      <div class="title-row">
+        <h1>Ofrenda</h1>
+        <div class="lang" id="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+      </div>
+      <p class="tagline" data-i18n="tagline"></p>
+
+      <form id="summon" class="summon">
+        <input id="url" name="url" type="text" data-i18n-placeholder="url" autocomplete="off" required>
+        <button type="submit" data-i18n="summon"></button>
+      </form>
+      <div class="examples" id="examples">
+        <span data-i18n="try"></span>
+        <button type="button" data-url="request/request">request</button>
+        <button type="button" data-url="palantir/tslint">tslint</button>
+        <button type="button" data-url="angular/angular.js">angular.js</button>
+      </div>
+      <p class="progress" id="progress" role="status"></p>
+
+      <article class="card" id="card" hidden>
+        <h2 id="card-name"></h2>
+        <p class="dates" id="card-dates"></p>
+        <p class="epitaph" id="card-epitaph"></p>
+        <dl class="facts" id="card-facts"></dl>
+        <p class="obituary" id="card-obituary"></p>
+        <h3 data-i18n="leftBehind"></h3>
+        <ul id="card-legacy"></ul>
+      </article>
+
+      <section class="seance" id="seance" hidden>
+        <div class="seance-head">
+          <h3 data-i18n="seance"></h3>
+          <button type="button" class="break" id="break" data-i18n="breakBond"></button>
+        </div>
+        <div class="log" id="log" aria-live="polite"></div>
+        <form id="ask" class="ask">
+          <input id="question" type="text" data-i18n-placeholder="question" autocomplete="off" required>
+          <button type="submit" data-i18n="ask"></button>
+        </form>
+      </section>
+    </aside>
+  </main>
+  <script type="module" src="/static/app.js"></script>
+</body>
+</html>
